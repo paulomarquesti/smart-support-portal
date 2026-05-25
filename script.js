@@ -21,7 +21,7 @@ form.addEventListener('submit', async (event) => {
     };
 
     // 4. URL temporária do seu futuro Webhook do n8n (vamos mudar depois)
-    const URL_N8N = "https://paulomrqx.app.n8n.cloud/webhook-test/920aaa3d-1082-497e-9409-b2f27cb1eaa5";
+    const URL_N8N = "https://paulomrqx.app.n8n.cloud/webhook/920aaa3d-1082-497e-9409-b2f27cb1eaa5";
 
     try {
         // Envia os dados para o n8n via requisição POST HTTP
