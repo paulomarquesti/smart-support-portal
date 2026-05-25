@@ -35,16 +35,16 @@ form.addEventListener('submit', async (event) => {
 
         // Se o n8n receber com sucesso (status 200-299)
         if (resposta.ok) {
-            exibirMensagem("Chamado aberto com sucesso! A IA já está processando sua demanda.", "sucesso");
+            exibirMensagem("Chamado aberto com sucesso! A IA já está processando sua demanda. Um e-mail de confirmação foi enviado para você.", "sucesso");
             form.reset(); // Limpa os campos do formulário
         } else {
             throw new Error("Erro no servidor");
         }
 
     } catch (erro) {
-        // Como a URL ainda não existe, o código vai cair aqui por enquanto!
+        // Caso o backend esteja offline
         console.error("Erro ao enviar dados:", erro);
-        exibirMensagem("Ops! O portal está em manutenção (Backend offline). Mas a lógica do JavaScript funcionou!", "erro");
+        exibirMensagem("Ops! O portal está em manutenção (Backend offline).", "erro");
     } finally {
         // Restaura o botão ao estado original
         btnEnviar.innerText = "Abrir Chamado Técnico";
