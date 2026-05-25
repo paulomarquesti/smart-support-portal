@@ -8,7 +8,3 @@ services:
         generateValue: true
       - key: N8N_USER_MANAGEMENT_DISABLED
         value: "false"
-    disk:
-      name: n8n-data
-      mountPath: /home/node/.n8n
-      sizeGB: 1
